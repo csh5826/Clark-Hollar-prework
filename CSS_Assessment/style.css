@@ -1,0 +1,49 @@
+body {
+    font-size: 10px;
+    margin: 0;
+}
+
+
+header {
+    text-align: center;
+    background-color: #615d5d;
+    margin-bottom: 20px;
+    
+}
+
+#left {
+    Float: left;
+    width: 50%;
+    text-align: center;
+    background-color: #000fe4;
+    height: 550px;
+    line-height: 550px;
+
+}
+
+#middle {
+    float: left;
+    width: 25%;
+    background-color: #ffffff;
+
+}
+#right {
+    Float: right;
+    text-align: center;
+    width: 25%;
+    background-color: #db0101;
+    height: 550px;
+    line-height: 550px;
+    
+
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #106100;
+}

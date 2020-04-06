@@ -8,8 +8,9 @@ body {
 
 h1 {
   text-align: left;
+  margin-top: 1em;
   color: rgb(245, 243, 243);
-  font-size: 20px;
+  font-size: 15px;
   
 }
 
