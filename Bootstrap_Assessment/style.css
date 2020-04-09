@@ -1,0 +1,30 @@
+body {
+  text-transform: uppercase;
+  background-color: #B0E0E6 !important;
+}
+
+a {
+  color: rgb(245, 243, 243); 
+}
+.jumbotron {
+  background-color: #B0E0E6 !important;
+}
+.navbar-FDM {
+
+  color:rgb(245, 243, 243);
+}
+p {
+  color: rgb(rgb(5, 2, 2), rgb(0, 0, 0), rgb(1, 1, 2))
+}
+
+h2 {
+  color: rgb(245, 243, 243);
+}
+
+h5 {
+  color: rgb(245, 243, 243);
+}
+h1 {
+    color: rgb(245, 243, 243);
+    font-size: 110px !important;
+  }
