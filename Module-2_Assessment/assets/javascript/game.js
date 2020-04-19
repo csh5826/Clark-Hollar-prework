@@ -19,6 +19,8 @@ var rapperNames = [
     "jadakiss",
     "50cent",
     "yingyangtwins",
+    "andre3000",
+    "bigboi",
 
 
 ]
