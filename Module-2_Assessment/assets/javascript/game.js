@@ -39,9 +39,14 @@ function randomWord() {
 
 //the random word's letters are replaced with _'s
 function start() {
+    randomWord();
+    correctGuessed = [];
+    wrongGuessed = [];
+    mistakes = 0;
     for (var i = 0; i < answer.length; i++) {
         correctGuessed[i] = "_";
 }
+checkLetter();
 //sends the word to the html file displayed in _ _ _ characters
 document.getElementById("nameSpotlight").innerHTML = correctGuessed.join(" ");
 console.log(answer);
@@ -58,11 +63,13 @@ function checkLetter() {
           found = true;
         }
       }
+      var win = checkWin();
       //now all letters have been checked, return any found
-      if (found) return; //if yes return
+      if (found && win);
+      else if (found) return; //if yes return
       
       // if wrong
-      if (wrongGuessed.indexOf(guess) === -1) {
+      else if (wrongGuessed.indexOf(guess) === -1) {
         wrongGuessed.push(guess);
         mistakes++;
         checkIfGameLost();
@@ -75,29 +82,19 @@ function checkLetter() {
 
   function checkIfGameLost() {
       if (mistakes === maxWrong) {
-          randomWord();
-          correctGuessed = [];
-          wrongGuessed = [];
-          mistakes = 0;
           start();
-          checkLetter();
+
       }
   }
 
   function checkWin() {
     if (correctGuessed.indexOf("_") === -1) {
       wins++;
-      randomWord();
-      correctGuessed = [];
-      wrongGuessed = [];
-      mistakes = 0;
       start();
-      checkLetter();
       document.getElementById("totalWins").innerHTML = wins;
+      document.getElementById("wrongGuesses").innerHTML = wrongGuessed.join(" ");
+      document.getElementById("mistakes").innerHTML = mistakes;
+      return(true);
     }
   }
-
-
-randomWord();
 start();
-checkLetter();
