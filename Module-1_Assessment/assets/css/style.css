@@ -1,10 +1,14 @@
 
+@media (max-width: 960px) {
+
 
 body {
+margin: 0 auto;
 font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 background-image: url(../images/cork-board.png);
 color: #777777;
 border-color: #dddddd
+
 
 }
 
@@ -82,7 +86,7 @@ footer {
    line-height:40px;
    
 }
-@media only screen and (max-width: 768px) {
+
     body {
         font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
         background-image: url(../images/cork-board.png);
@@ -147,4 +151,156 @@ footer {
            line-height:40px;
            
         }
-}
+    }
+
+@media  (min-width: 961px) {
+    body {
+        margin: 0 auto;
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+        background-image: url(../images/cork-board.png);
+        color: #777777;
+        border-color: #dddddd
+        
+        
+        }
+        
+        .rightnav {
+            color: #777777;
+        
+            
+        }
+        .navbar-item {
+            padding-left: 30px;
+        }
+        .navbar {
+            list-style: none;
+            
+            
+        }
+        
+        h1.navbar-brand{
+            background-color: #4aaaa5;
+            color: #FFFFFF !important;
+            font-family: 'Georgia', Times, Times New Roman, serif;
+            font-weight: bold !important;
+            padding: .5rem 1rem;
+            
+          
+        }
+        
+        h2 {
+        color: #4aaaa5;
+        font-family: 'Georgia', Times, Times New Roman, serif;
+        font-weight: bold !important;
+        }
+        
+        .jumbotron{
+            background: #FFFFFF !important;
+            color: #777777;
+            
+        }
+        .text-left{
+            margin-top: -25px;
+            padding-bottom: 10px;
+        }
+        
+        #firstfooter{
+        
+            background:#4aaaa5;
+            position: fixed;
+            Bottom: 0;
+            line-height: 45px;
+            width: 100%;
+        
+        }
+        footer {
+        
+            background: #666666;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            line-height: 40px;
+            text-align: center;
+            color: #777777;
+            
+            
+        }
+        .text-block {
+            background: #4aaaa5;
+            position: absolute;
+           text-align: center;
+           top: 78%;
+           width: 100%;
+           color: #FFFFFF;
+           font-weight: bold;
+           font-family: 'Georgia', Times, Times New Roman, serif;
+           height: 40px;
+           line-height:40px;
+           
+        }
+        
+            body {
+                font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+                background-image: url(../images/cork-board.png);
+                color: #777777;
+                
+                }
+                
+             .rightnav {
+                    color: #777777;
+                }
+        
+            .navbar {
+            display: none;
+            }
+            h2 {
+                color: #4aaaa5;
+                font-family: 'Georgia', Times, Times New Roman, serif;
+                font-weight: bold !important;
+                }
+                
+                .jumbotron{
+                    background: #FFFFFF !important;
+                    color: #777777;
+                    
+                }
+                .text-left{
+                    margin-top: -25px;
+                    padding-bottom: 10px;
+                }
+                
+                #firstfooter{
+                
+                    background:#4aaaa5;
+                    position: fixed;
+                    Bottom: 0;
+                    line-height: 45px;
+                    width: 100%;
+                
+                }
+                footer {
+                
+                    background: #666666;
+                    position: fixed;
+                    width: 100%;
+                    bottom: 0;
+                    line-height: 40px;
+                    text-align: center;
+                    color: #777777;
+                    
+                    
+                }
+                .text-block {
+                    background: #4aaaa5;
+                    position: absolute;
+                   text-align: center;
+                   top: 78%;
+                   width: 100%;
+                   color: #FFFFFF;
+                   font-weight: bold;
+                   font-family: 'Georgia', Times, Times New Roman, serif;
+                   height: 40px;
+                   line-height:40px;
+                   
+                }
+            }
