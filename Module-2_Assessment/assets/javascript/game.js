@@ -15,6 +15,10 @@ var rapperNames = [
     "bustarhymes",
     "nelly",
     "missyelliott",
+    "mikejones",
+    "jadakiss",
+    "50cent",
+    "yingyangtwins",
 
 
 ]
@@ -24,13 +28,7 @@ var correctGuessed = []; // correctly guessed letters
 var wrongGuessed = []; // incorrectly guessed letters
 var guess; //user guess
 var wins= 0; // how many wins the player has
-var gameStart = false; // used to start the game to account for # of wrong guesses and wins
 
-function newGame() {
-    mistakes = maxWrong;
-    gameStart = false;
-
-}
 
 //picks a random word from the above array
 function randomWord() {
@@ -52,7 +50,7 @@ console.log(answer);
 function checkLetter() {
     document.onkeyup = function(event) {
       guess = event.key.toLowerCase();
-      var found = false; //lets use bool to check if a letter was found
+      var found = false; //boolean to see if letter was found
       for (i = 0; i < answer.length; i++) {
         if (guess === answer[i]) {
           correctGuessed[i] = guess;
@@ -60,7 +58,7 @@ function checkLetter() {
           found = true;
         }
       }
-      //now all letters have been checked, was any found
+      //now all letters have been checked, return any found
       if (found) return; //if yes return
       
       // if wrong
@@ -68,6 +66,7 @@ function checkLetter() {
         wrongGuessed.push(guess);
         mistakes++;
         checkIfGameLost();
+        checkWin();
         document.getElementById("wrongGuesses").innerHTML = wrongGuessed.join(" ");
         document.getElementById("mistakes").innerHTML = mistakes;
       }
@@ -76,8 +75,26 @@ function checkLetter() {
 
   function checkIfGameLost() {
       if (mistakes === maxWrong) {
-          document.getElementById("GameOver").innerHTML = "You lost."
+          randomWord();
+          correctGuessed = [];
+          wrongGuessed = [];
+          mistakes = 0;
+          start();
+          checkLetter();
       }
+  }
+
+  function checkWin() {
+    if (correctGuessed.indexOf("_") === -1) {
+      wins++;
+      randomWord();
+      correctGuessed = [];
+      wrongGuessed = [];
+      mistakes = 0;
+      start();
+      checkLetter();
+      document.getElementById("totalWins").innerHTML = wins;
+    }
   }
 
 
